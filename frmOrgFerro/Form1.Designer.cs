@@ -33,11 +33,9 @@
             this.lblDias = new System.Windows.Forms.Label();
             this.txtDistancia = new System.Windows.Forms.TextBox();
             this.cmbDias = new System.Windows.Forms.ComboBox();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.lblFechaIda = new System.Windows.Forms.Label();
-            this.lblFechaVuelta = new System.Windows.Forms.Label();
-            this.dtFechaIda = new System.Windows.Forms.DateTimePicker();
-            this.dtFechaVuelta = new System.Windows.Forms.DateTimePicker();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.lblDestino = new System.Windows.Forms.Label();
+            this.txtDestino = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // linkLabel1
@@ -46,7 +44,7 @@
             this.linkLabel1.DisabledLinkColor = System.Drawing.Color.White;
             this.linkLabel1.Font = new System.Drawing.Font("MS UI Gothic", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.MidnightBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(129, 21);
+            this.linkLabel1.Location = new System.Drawing.Point(95, 20);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(121, 24);
             this.linkLabel1.TabIndex = 1;
@@ -57,7 +55,7 @@
             // 
             this.lblDistancia.AutoSize = true;
             this.lblDistancia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDistancia.Location = new System.Drawing.Point(28, 73);
+            this.lblDistancia.Location = new System.Drawing.Point(33, 100);
             this.lblDistancia.Name = "lblDistancia";
             this.lblDistancia.Size = new System.Drawing.Size(58, 15);
             this.lblDistancia.TabIndex = 2;
@@ -67,7 +65,7 @@
             // 
             this.lblDias.AutoSize = true;
             this.lblDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDias.Location = new System.Drawing.Point(28, 120);
+            this.lblDias.Location = new System.Drawing.Point(33, 141);
             this.lblDias.Name = "lblDias";
             this.lblDias.Size = new System.Drawing.Size(98, 15);
             this.lblDias.TabIndex = 3;
@@ -75,9 +73,9 @@
             // 
             // txtDistancia
             // 
-            this.txtDistancia.Location = new System.Drawing.Point(151, 73);
+            this.txtDistancia.Location = new System.Drawing.Point(151, 100);
             this.txtDistancia.Name = "txtDistancia";
-            this.txtDistancia.Size = new System.Drawing.Size(200, 20);
+            this.txtDistancia.Size = new System.Drawing.Size(124, 20);
             this.txtDistancia.TabIndex = 5;
             this.txtDistancia.TextChanged += new System.EventHandler(this.txtDistancia_TextChanged);
             // 
@@ -115,67 +113,48 @@
             "28",
             "29",
             "30"});
-            this.cmbDias.Location = new System.Drawing.Point(151, 120);
+            this.cmbDias.Location = new System.Drawing.Point(151, 141);
             this.cmbDias.Name = "cmbDias";
-            this.cmbDias.Size = new System.Drawing.Size(200, 21);
+            this.cmbDias.Size = new System.Drawing.Size(124, 21);
             this.cmbDias.TabIndex = 7;
             // 
-            // btnCalcular
+            // btnConsultar
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(279, 276);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(95, 34);
-            this.btnCalcular.TabIndex = 8;
-            this.btnCalcular.Text = "Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            this.btnCalcular.Click += new System.EventHandler(this.button1_Click);
+            this.btnConsultar.Location = new System.Drawing.Point(220, 186);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(95, 34);
+            this.btnConsultar.TabIndex = 8;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblFechaIda
+            // lblDestino
             // 
-            this.lblFechaIda.AutoSize = true;
-            this.lblFechaIda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaIda.Location = new System.Drawing.Point(28, 167);
-            this.lblFechaIda.Name = "lblFechaIda";
-            this.lblFechaIda.Size = new System.Drawing.Size(86, 16);
-            this.lblFechaIda.TabIndex = 10;
-            this.lblFechaIda.Text = "Fecha de ida";
-            this.lblFechaIda.Click += new System.EventHandler(this.label1_Click);
+            this.lblDestino.AutoSize = true;
+            this.lblDestino.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDestino.Location = new System.Drawing.Point(33, 61);
+            this.lblDestino.Name = "lblDestino";
+            this.lblDestino.Size = new System.Drawing.Size(53, 16);
+            this.lblDestino.TabIndex = 9;
+            this.lblDestino.Text = "Destino";
             // 
-            // lblFechaVuelta
+            // txtDestino
             // 
-            this.lblFechaVuelta.AutoSize = true;
-            this.lblFechaVuelta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaVuelta.Location = new System.Drawing.Point(28, 213);
-            this.lblFechaVuelta.Name = "lblFechaVuelta";
-            this.lblFechaVuelta.Size = new System.Drawing.Size(103, 16);
-            this.lblFechaVuelta.TabIndex = 11;
-            this.lblFechaVuelta.Text = "Fecha de vuelta";
-            // 
-            // dtFechaIda
-            // 
-            this.dtFechaIda.Location = new System.Drawing.Point(151, 167);
-            this.dtFechaIda.Name = "dtFechaIda";
-            this.dtFechaIda.Size = new System.Drawing.Size(200, 20);
-            this.dtFechaIda.TabIndex = 12;
-            // 
-            // dtFechaVuelta
-            // 
-            this.dtFechaVuelta.Location = new System.Drawing.Point(151, 213);
-            this.dtFechaVuelta.Name = "dtFechaVuelta";
-            this.dtFechaVuelta.Size = new System.Drawing.Size(200, 20);
-            this.dtFechaVuelta.TabIndex = 13;
+            this.txtDestino.Location = new System.Drawing.Point(151, 61);
+            this.txtDestino.Name = "txtDestino";
+            this.txtDestino.Size = new System.Drawing.Size(123, 20);
+            this.txtDestino.TabIndex = 10;
+            this.txtDestino.TextChanged += new System.EventHandler(this.txtDestino_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(403, 341);
-            this.Controls.Add(this.dtFechaVuelta);
-            this.Controls.Add(this.dtFechaIda);
-            this.Controls.Add(this.lblFechaVuelta);
-            this.Controls.Add(this.lblFechaIda);
-            this.Controls.Add(this.btnCalcular);
+            this.ClientSize = new System.Drawing.Size(327, 232);
+            this.Controls.Add(this.txtDestino);
+            this.Controls.Add(this.lblDestino);
+            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.cmbDias);
             this.Controls.Add(this.txtDistancia);
             this.Controls.Add(this.lblDias);
@@ -194,11 +173,9 @@
         private System.Windows.Forms.Label lblDias;
         private System.Windows.Forms.TextBox txtDistancia;
         private System.Windows.Forms.ComboBox cmbDias;
-        private System.Windows.Forms.Button btnCalcular;
-        private System.Windows.Forms.Label lblFechaIda;
-        private System.Windows.Forms.Label lblFechaVuelta;
-        private System.Windows.Forms.DateTimePicker dtFechaIda;
-        private System.Windows.Forms.DateTimePicker dtFechaVuelta;
+        private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.Label lblDestino;
+        private System.Windows.Forms.TextBox txtDestino;
     }
 }
 
