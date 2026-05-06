@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lblDistancia = new System.Windows.Forms.Label();
             this.lblDias = new System.Windows.Forms.Label();
@@ -81,6 +82,7 @@
             // 
             // cmbDias
             // 
+            this.cmbDias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDias.FormattingEnabled = true;
             this.cmbDias.Items.AddRange(new object[] {
             "1",
@@ -120,7 +122,7 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(220, 186);
+            this.btnConsultar.Location = new System.Drawing.Point(231, 185);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(95, 34);
             this.btnConsultar.TabIndex = 8;
@@ -151,7 +153,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(327, 232);
+            this.ClientSize = new System.Drawing.Size(338, 242);
             this.Controls.Add(this.txtDestino);
             this.Controls.Add(this.lblDestino);
             this.Controls.Add(this.btnConsultar);
@@ -160,8 +162,11 @@
             this.Controls.Add(this.lblDias);
             this.Controls.Add(this.lblDistancia);
             this.Controls.Add(this.linkLabel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Organziación Ferro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Organización Ferro";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

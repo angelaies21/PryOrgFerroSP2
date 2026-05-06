@@ -20,15 +20,34 @@ namespace frmOrgFerro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtDistancia.Text == "" || txtDestino.Text == "" || cmbDias.SelectedIndex == -1)
+            if (txtDestino.Text == "")
             {
-                MessageBox.Show("Complete los datos");
+                MessageBox.Show("ingrese el destino", "título mensaje",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDestino.Focus();
             }
             else
             {
+                if (txtDistancia.Text == "")
+                {
+                    MessageBox.Show("Ingrese la distancia", "título mensaje",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtDistancia.Focus();
+                }
+                else
+                {
+                    if (cmbDias.Text == "")
+                    {
+                        MessageBox.Show("Ingrese los días", "título mensaje",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        cmbDias.Focus();
+                    }
+                    else
+            {
+               
 
-                //variables
-                string destino;
+                    //variables
+                    string destino;
                 double distancia;
                 double distanciaTotal;
                 int dias;
@@ -40,28 +59,38 @@ namespace frmOrgFerro
                 destino = txtDestino.Text;
                 distancia = Convert.ToDouble(txtDistancia.Text); //todouble convierte el texto a num decimal
                 dias = Convert.ToInt32(cmbDias.SelectedItem); //toInt32 convierte a numero entero
-                distanciaTotal = distancia * 500; //calcula distancia total de ida y vuelta
-                precioBase = distanciaTotal * 400; // calcula el precio base
+                distanciaTotal = distancia * 50; //calcula distancia total de ida y vuelta
+                precioBase = distanciaTotal * 40; // calcula el precio base
 
                 datos = "Destino: " + destino + "\n" + "Distancia ingresada: " + distancia + "km\n" + "Distancia ida y vuelta: " + distanciaTotal + "km\n" + "Precio base: $ " + precioBase;
 
-                MessageBox.Show(datos, "Calculo de boleto Ferro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                if (distancia >= 100 && dias >= 7)
+ 
+                    if (distancia >= 100 && dias >= 7)
                 {
                     preciofinal = precioBase / 2;
-                    datos = datos + "Descuento 50% aplicada \n";
+                    datos = datos + "\n Descuento 50% aplicada \n";
 
                 }
                 else {
                     preciofinal = precioBase;
-                    datos = datos + "Sin descuento \n";
+                    datos = datos + "\n Sin descuento \n";
                 
+                
+               }
                 datos = datos + "Precio final: $" + preciofinal;
                 MessageBox.Show(datos, "Calculo de boleto Ferro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-               }
-           }
-       }
+            
+                txtDestino.Clear();
+                txtDistancia.Clear();
+                cmbDias.Items.Clear();
+
+            }
+        }
+    }
+        }
+
+
+
 
         private void txtDistancia_TextChanged(object sender, EventArgs e)
         {
@@ -74,6 +103,11 @@ namespace frmOrgFerro
         }
 
         private void txtDestino_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
