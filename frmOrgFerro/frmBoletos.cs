@@ -82,7 +82,7 @@ namespace frmOrgFerro
             
                 txtDestino.Clear();
                 txtDistancia.Clear();
-                cmbDias.Items.Clear();
+                cmbDias.SelectedItem = null;  //vacia cuando no esta nada selecionado
 
             }
         }
@@ -108,6 +108,11 @@ namespace frmOrgFerro
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbDias_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

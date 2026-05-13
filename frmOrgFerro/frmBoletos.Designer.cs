@@ -119,6 +119,7 @@
             this.cmbDias.Name = "cmbDias";
             this.cmbDias.Size = new System.Drawing.Size(124, 21);
             this.cmbDias.TabIndex = 7;
+            this.cmbDias.SelectedIndexChanged += new System.EventHandler(this.cmbDias_SelectedIndexChanged);
             // 
             // btnConsultar
             // 
@@ -148,7 +149,7 @@
             this.txtDestino.TabIndex = 10;
             this.txtDestino.TextChanged += new System.EventHandler(this.txtDestino_TextChanged);
             // 
-            // Form1
+            // frmBoletos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -163,7 +164,7 @@
             this.Controls.Add(this.lblDistancia);
             this.Controls.Add(this.linkLabel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "frmBoletos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Organización Ferro";
             this.Load += new System.EventHandler(this.Form1_Load);
