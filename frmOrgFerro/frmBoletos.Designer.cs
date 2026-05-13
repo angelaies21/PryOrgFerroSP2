@@ -1,6 +1,6 @@
 ﻿namespace frmOrgFerro
 {
-    partial class Form1
+    partial class frmBoletos
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBoletos));
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.lblDistancia = new System.Windows.Forms.Label();
             this.lblDias = new System.Windows.Forms.Label();

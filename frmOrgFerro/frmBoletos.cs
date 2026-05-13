@@ -11,16 +11,16 @@ using System.Windows.Forms;
 
 namespace frmOrgFerro
 {
-    public partial class Form1 : Form
+    public partial class frmBoletos : Form
     {
-        public Form1()
+        public frmBoletos()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtDestino.Text == "")
+            if (txtDestino.Text == "")  //ve si el usuario escribio algo, si esta vacio
             {
                 MessageBox.Show("ingrese el destino", "título mensaje",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
